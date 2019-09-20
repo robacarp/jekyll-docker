@@ -12,5 +12,7 @@ COPY nginx.conf /etc/nginx/nginx.conf
 COPY servers /etc/nginx/servers/
 COPY locations /etc/nginx/locations/
 
+COPY scripts/ /
+
 EXPOSE 80
-ENTRYPOINT nginx
+ENTRYPOINT ["/entrypoint"]
