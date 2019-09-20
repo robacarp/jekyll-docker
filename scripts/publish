@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker build . -t robacarp/static-dokku
+docker push robacarp/static-dokku

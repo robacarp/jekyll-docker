@@ -1,7 +1,6 @@
-FROM ruby:2.4.0
+FROM alpine:3.10
 
-RUN apt-get update
-RUN apt-get install -y nginx
+RUN apk add --no-cache --update nginx
 RUN ln -sf /dev/stdout /var/log/nginx/access.log
 RUN ln -sf /dev/stderr /var/log/nginx/error.log
 
